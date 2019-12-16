@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gymkana</title>
+    <script type="text/javascript" src="gymkana.js"></script>
+</head>
+<body>
+<header>
+    La gymkana consistirá en localizar un punto en base a las coordenadas. Cuando estés a menos de 3 metros (precisión
+    GPS), habrás ganado.
+</header>
+<main>
+    Puedes definir puntos para la gymkana.
+    <form id="pointForm">
+        <input id="lat" name="latitude" type="number" placeholder="Latitud (ej: 42.85)" step="0.01">
+        <input id="lon" name="longitude" type="number" placeholder="Longitud (ej: 42.85)" step="0.01">
+        <button type="button" onclick="addPoint()">Añadir punto</button>
+    </form>
+    <ul id="points">
+    </ul>
+    <img id="map">
+</main>
+<footer>
+    Tu posición actual es: <span id="pos"></span><br/>
+    Estás a: <span id="distance"></span> metros
+</footer>
+</body>
+</html>
